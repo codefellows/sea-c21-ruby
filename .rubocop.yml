@@ -1,0 +1,9 @@
+Documentation:
+  Enabled: false
+
+AllCops:
+  Include:
+    - Gemfile
+  Exclude:
+    - bin/*
+    - vendor/**/*
