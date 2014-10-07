@@ -2,6 +2,9 @@ RSpec.configure do |config|
   # Disable all monkey patching within rspec
   config.disable_monkey_patching!
 
+  # Tell RSpec to abort the run on first failure
+  config.fail_fast = true
+
   # Run only the specs without tagged broken
   # config.filter_run_excluding :broken
 
