@@ -65,9 +65,11 @@ In other words, a Unix shell works as a read-evaluate-print loop or **REPL**.
 
 The default profile for the Terminal looks pretty, but uses small text and has low color contrast. Let's fix that.
 
-First, run this command to download and install a hax0r looking Terminal Profile called `Tomorrow`.
+First, run these commands to download and install a hax0r looking Terminal Profile called `Tomorrow`.
 
 ```
+sudo apt-get update
+sudo apt-get install -y curl
 curl -fsSL http://git.io/Ak1LNQ | sh
 ```
 
