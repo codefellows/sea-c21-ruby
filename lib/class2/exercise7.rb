@@ -1,8 +1,31 @@
-# Section 6.2 on page 32
 # 5 points
 #
-# Write an angry boss program that rudely asks what you want. Whatever you
-# answer, the angry boss should yell it back to you and then fire you. For
-# example, if you type in I want a raise, it should yell back like this:
+# Write a program that displays the following table of contents:
 #
-# WHADDAYA MEAN 'I WANT A RAISE'?!? YOU'RE FIRED!!
+#   $ ruby exercise7.rb
+#                   Table of Contents
+#   Chapter 1:  Getting Started                page  1
+#   Chapter 2:  Numbers                        page  9
+#   Chapter 3:  Letters                        page 13
+#
+# Tip #1: The width of each line is 50 characters.
+#
+# Tip #2: You'll need the following methods:
+#
+#   string.center(Integer)  #=> String
+#
+#     Returns a new String of length Integer with `string` centered.
+#
+#     'bird'.center(10)  #=> '   bird   '
+#
+#   string.ljust(Integer)  #=> String
+#
+#     Returns a new String of length Integer with `string` left justified.
+#
+#     'bird'.ljust(10)  #=> 'bird      '
+#
+#   string.rjust(Integer)  #=> String
+#
+#     Returns a new String of length Integer with `string` right justified.
+#
+#     'bird'.rjust(10)  #=> '      bird'

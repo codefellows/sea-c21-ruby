@@ -1,5 +1,15 @@
-# Section 2.5 on page 12
 # 5 points
 #
-# If I am 1,160 million seconds old (which I am, though I was somewhere in the
-# 800 millions when I started this book), how old am I?
+# Write a program that asks for a person's first name, then middle name, and
+# then last name. Finally, it should greet the person using their full name.
+#
+# Here's how the program must work:
+#
+#   $ ruby exercise4.rb
+#   What's your first name?
+#   Samuel
+#   What's your middle name?
+#   Leroy
+#   What's your last name?
+#   Jackson
+#   Nice to meet you, Samuel Leroy Jackson.

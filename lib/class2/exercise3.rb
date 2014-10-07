@@ -1,5 +1,4 @@
-# Section 2.5 on page 12
 # 5 points
 #
-# How many seconds old are you? (I'm not going to check your answer, so be as
-# accurate - or not - as you want.)
+# If a person is 1,160 million seconds old, display their age in years. As
+# always, assume leap years don't exist.

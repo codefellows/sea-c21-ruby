@@ -1,6 +1,11 @@
-# Section 5.6 on page 25
 # 5 points
 #
-# Write a program that asks for a person's favorite number. Have your program
-# add 1 to the number, and then suggest the result as a bigger and better
-# favorite number. (Do be tactful about it, though.)
+# Write an angry boss program that rudely asks what you want. Whatever you
+# answer, the angry boss must yell it back to you and then fire you.
+#
+# Here's how the program must work:
+#
+#   $ ruby exercise6.rb
+#   CAN'T YOU SEE I'M BUSY?! MAKE IT FAST, JOHNSON!
+#   i want a raise
+#   WHADDAYA MEAN 'I WANT A RAISE'?!? YOU'RE FIRED!!

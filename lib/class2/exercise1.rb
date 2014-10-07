@@ -1,4 +1,5 @@
-# Section 2.5 on page 12
 # 5 points
 #
-# How many hours are in a year?
+# Assuming leap-years don't exist, display the hours are in year.
+#
+# TIP: I expect you to use a mathematical equation.
