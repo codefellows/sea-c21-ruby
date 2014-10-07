@@ -1,7 +1,7 @@
 # 5 points
 #
-# Write a program that asks for a person's first name, then middle name, and
-# then last name. Finally, it greets the person using their full name.
+# Write a program that asks for a person's first name, then middle name,
+# then last name, and then greets the person using their full name.
 #
 # Here's how the program must work:
 #
