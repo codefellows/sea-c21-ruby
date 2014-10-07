@@ -5,7 +5,7 @@ Now that your Terminal is setup, it's time to install [Homebrew](http://brew.sh/
 To get started, run the following command:
 
 ```
-ruby -e '$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)'
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/install/master/install)"
 ```
 
 **TIP:** Be sure to agree when asked to install the **XCode CommandLine Tools**.
