@@ -7,7 +7,7 @@ RSpec.describe 'Class 2 Exercise 2' do
     expect { exercise2 }.to output.to_stdout
   end
 
-  it 'display the minutes are in a decade' do
+  it 'display the minutes in a decade' do
     expect { exercise2 }.to output("5256000\n").to_stdout
   end
 end
