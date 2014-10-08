@@ -102,10 +102,10 @@ puts 42
 
 ```ruby
 # bad
-firstName = "Sierra"
+firstName = 'Sierra'
 
 # good
-first_name = "Sierra"
+first_name = 'Sierra'
 ```
 
 

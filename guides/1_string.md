@@ -1,18 +1,18 @@
 ## String Guidelines
 
 
-#### Prefer string interpolation instead of string concatenation
+#### Use single-quoted strings by default
 
 ```ruby
 # bad
-first_name + " the answer is " + 42.to_s
+"Hello world"
 
 # good
-"#{first_name} the answer is #{42}"
+'Hello world'
 ```
 
 
-#### Prefer double-quoted strings
+#### Use double-quoted strings to handle content with a single-quote
 
 ```ruby
 # bad
@@ -23,18 +23,7 @@ first_name + " the answer is " + 42.to_s
 ```
 
 
-##### Handles string interpolation
-
-```ruby
-# doesn't work
-'Hello #{name}'
-
-# works
-"Hello #{name}"
-```
-
-
-##### Handles special escape characters
+#### Use double-quoted strings to handle special escape characters
 
 ```ruby
 # doesn't work
@@ -45,12 +34,27 @@ first_name + " the answer is " + 42.to_s
 ```
 
 
-##### Use single-quoted strings if it contains a "
+#### Use double-quoted strings to handle string interpolation
 
 ```ruby
+first_name = 'Sierra'
+
+# doesn't work
+'Hello #{first_name}'
+
+# works
+"Hello #{first_name}"
+```
+
+
+#### Prefer string interpolation instead of string concatenation
+
+```ruby
+first_name = 'Sierra'
+
 # bad
-"\"Be yourself – everyone else is taken.\" - Anonymous"
+first_name + ' the answer is ' + 42.to_s
 
 # good
-'"Be yourself – everyone else is taken." - Anonymous'
+"#{first_name} the answer is #{42}"
 ```
