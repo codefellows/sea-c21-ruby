@@ -127,7 +127,13 @@ First, you'll need to download and install [Bundler](http://bundler.io/), a tool
 sudo gem install bundler
 ```
 
-And second, you'll want to add an `upstream` remote to you locally cloned project:
+Second, install the 3rd-party Ruby code with Bundler:
+
+```
+bundle install --path vendor/bundle
+```
+
+And third, you'll want to add an `upstream` remote to you locally cloned project:
 
 ```
 git remote add upstream https://github.com/codefellows/sea-c21-ruby.git
