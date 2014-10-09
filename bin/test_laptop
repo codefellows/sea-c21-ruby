@@ -1,0 +1,52 @@
+#!/bin/sh
+
+out=lib/class1/laptop.txt
+
+echo '==> uname -v' | tee $out
+uname -v | tee -a $out
+
+if test `uname` = 'Darwin'; then
+  echo '==> brew -v' | tee -a $out
+  brew -v | tee -a $out
+
+  echo '==> brew doctor' | tee -a $out
+  brew doctor | tee -a $out
+fi
+
+echo '==> echo $SHELL' | tee -a $out
+echo $SHELL | tee -a $out
+
+echo '==> echo $PATH' | tee -a $out
+echo $PATH | tee -a $out
+
+echo '==> echo $EDITOR' | tee -a $out
+echo $EDITOR | tee -a $out
+
+echo '==> subl -v' | tee -a $out
+subl -v | tee -a $out
+
+echo '==> cat Preferences.sublime-settings' | tee -a $out
+if test `uname` = 'Darwin'; then
+  st_prefs=~/Library/Application\ Support/Sublime\ Text\ 2
+else
+  st_prefs=~/.config/sublime-text-3
+fi
+cat "$st_prefs/Packages/User/Preferences.sublime-settings" | tee -a $out
+
+echo '==> ruby -v' | tee -a $out
+ruby -v | tee -a $out
+
+echo '==> cat .irbrc' | tee -a $out
+cat ~/.irbrc | tee -a $out
+
+echo '==> git --version' | tee -a $out
+git --version | tee -a $out
+
+echo '==> git config -l' | tee -a $out
+git config -l | sort | tee -a $out
+
+echo '==> bundle -v' | tee -a $out
+bundle -v | tee -a $out
+
+echo '==> bundle list' | tee -a $out
+bundle list | tee -a $out

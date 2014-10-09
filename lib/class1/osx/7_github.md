@@ -65,34 +65,22 @@ Anything typed appears after the green `✔` prompt symbol. :+1:
 **TIP:** The full name of your working directory is `~/Projects/sea-c21-ruby`. To save prompt space, Fish abbreviates it. This is especially handy for **deeply nested** directories.
 
 
-### Test your setup
+### Test your laptop
 
-Now that the shell's working directory is set to the project's directory, you can test how well you've setup your computer. :8ball:
+Now that the shell's working directory is set to the project's directory, you can test how well you've setup your laptop. :8ball:
 
-To get started, run the following command and give it a few seconds to complete:
-
-```
-lib/class1/test_osx.sh > lib/class1/osx.txt
-```
-
-Feel free to take a look at both the test:
+To get started, run the following command:
 
 ```
-cat lib/class1/test_osx.sh
-```
-
-And the results:
-
-```
-cat lib/class1/osx.txt
+bin/test_laptop
 ```
 
 Now, you may have noticed a red `✖` has replaced your prompt symbol. It indicates your staging area is dirty. :worried:
 
-To fix that, add `lib/class1/osx.txt` to your repository's staging area:
+To fix that, add `lib/class1/laptop.txt` to your repository's staging area:
 
 ```
-git add lib/class1/osx.txt
+git add lib/class1/laptop.txt
 ```
 
 And commit the changes to your repository:
