@@ -67,7 +67,7 @@ Anything typed appears after the green `✔` prompt symbol. :+1:
 
 ### Test your laptop
 
-Now that the shell's working directory is set to the project's directory, you can test how well you've setup your laptop. :8ball:
+Now that the working directory is set to the project's directory, you can test how well you've setup your laptop. :8ball:
 
 To get started, run the following command:
 
