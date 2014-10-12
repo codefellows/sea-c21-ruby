@@ -6,4 +6,5 @@ AllCops:
     - Gemfile
   Exclude:
     - bin/*
+    - scratch.rb
     - vendor/**/*
