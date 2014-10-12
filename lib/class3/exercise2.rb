@@ -1,28 +1,57 @@
-# Section 7.5 on page 49
 # 5 points
 #
-# Whatever you say to Grandma (whatever you type in), she should respond with
-# this:
+# Write a program that chats with Nana, your hard of hearing Grandmother.
 #
-# HUH?! SPEAK UP, SONNY!
+# Type 'BYE' to stop chatting with Nana. For example:
 #
-# unless you shout it (type in all capitals). If you shout, she can hear you
-# (or at least she thinks so) and yells back:
+#   $ ruby exercise2.rb
+#   Nana: HI SWEETIE! GIVE NANA A KISS!
+#   BYE
+#   Nana: BYE SWEETIE!
 #
-# NO, NOT SINCE 1938!
+# If you type something that's not in all uppercase, like 'bye', then Nana
+# replies like this:
 #
-# To make your program really believable, have Grandma shout a different year
-# each time, maybe any year at random between 1930 and 1950. (This part is
-# optional and would be much easier if you read the section on Ruby's random
-# number generator on page 33.) You can't stop talking to Grandma until you
-# shout BYE.
+#   $ ruby exercise2.rb
+#   Nana: HI SWEETIE! GIVE NANA A KISS!
+#   bye
+#   Nana: HUH?! SPEAK UP, SWEETIE!"
+#   BYE
+#   Nana: BYE SWEETIE!
 #
-# Hint 1: Don't forget about chomp! 'BYE' with an Enter at the end is not the
-# same as 'BYE' without one!
+# If you type something that's in all uppercase, not including 'BYE', she
+# responds like this:
 #
-# Hint 2: Try to think about what parts of your program should happen over and
-# over again. All of those should be in your while loop.
+#   $ ruby exercise2.rb
+#   Nana: HI SWEETIE! GIVE NANA A KISS!
+#   hi nana
+#   Nana: HUH?! SPEAK UP, SWEETIE!
+#   HI NANA
+#   Nana: NOT SINCE 1936!
+#   BYE
+#   Nana: BYE SWEETIE!
 #
-# Hint 3: People often ask me, 'How can I make rand give me a number in a range
-# not starting at zero?' But you don't need it to. Is there something you could
-# do to the number rand returns to you?
+# To make your program really believable, have Nana shout a random year
+# between 1930 and 1950 each time. For example:
+#
+#   $ ruby exercise2.rb
+#   Nana: HI SWEETIE! GIVE NANA A KISS!
+#   hi nana
+#   Nana: HUH?! SPEAK UP, SWEETIE!
+#   HI NANA
+#   Nana: NOT SINCE 1936!
+#   what?
+#   Nana: HUH?! SPEAK UP, SWEETIE!
+#   WHAT?
+#   Nana: NOT SINCE 1949!
+#   bye
+#   Nana: HUH?! SPEAK UP, SWEETIE!
+#   BYE
+#   Nana: BYE SWEETIE!
+#
+# TIP #1: Remember, 'BYE' != "BYE\n".
+#
+# Tip #2: Put the parts that happen over and over again inside a loop.
+#
+# Tip #3: Let the `rand` method return a number in a range starting at zero.
+# What can you do to the number `rand` returns to make it at least 1930?
