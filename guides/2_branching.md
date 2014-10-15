@@ -43,14 +43,14 @@ do_something unless some_condition
 
 ```ruby
 # bad
-unless grade >= 75
+unless grade >= 80
   puts 'fail'
 else
   puts 'pass'
 end
 
 # good
-if grade >= 75
+if grade >= 80
   puts 'pass'
 else
   puts 'fail'
