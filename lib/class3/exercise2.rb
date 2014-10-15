@@ -51,7 +51,7 @@
 #
 # TIP #1: Remember, 'BYE' != "BYE\n".
 #
-# Tip #2: Put the parts that happen over and over again inside a loop.
+# TIP #2: Put the parts that happen over and over again inside a loop.
 #
-# Tip #3: Let the `rand` method return a number in a range starting at zero.
+# TIP #3: Let the `rand` method return a number in a range starting at zero.
 # What can you do to the number `rand` returns to make it at least 1930?

@@ -8,9 +8,9 @@
 #   Chapter 2:  Numbers                        page  9
 #   Chapter 3:  Letters                        page 13
 #
-# Tip #1: The width of each line is 50 characters.
+# TIP #1: The width of each line is 50 characters.
 #
-# Tip #2: You'll need the following methods:
+# TIP #2: You'll need the following methods:
 #
 #   string.center(Integer)  #=> String
 #

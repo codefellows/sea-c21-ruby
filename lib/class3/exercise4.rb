@@ -7,4 +7,4 @@
 # Years divisible by 100 are not leap years (e.g. 1900) unless they are also
 # divisible by 400 (e.g. 2000).
 #
-# Tip: I expect you to use a loop and a few modulo operations.
+# TIP: I expect you to use a loop and a few modulo operations.
