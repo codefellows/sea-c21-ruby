@@ -1,15 +1,19 @@
 #!/usr/bin/env ruby
 #
-# Section 8.3 on page 56
 # 5 points
 #
-# Rewrite your table of contents program on page 32. Start the program with an
-# array holding all of the information for your table of contents (chapter
-# names, page numbers, and so on). Then print out the information from the array
-# in a beautifully formatted table of contents like this:
+# Write a program that displays the following table of 90's Hip-Hop hits:
 #
-#                 Table of Contents
+#   $ ruby exercise2.rb
+#   Can I Kick It?      A Tribe Called Quest     1991
+#   Rump Shaker         Wreckx-n-Effect          1992
+#   Check Yo Self       Ice Cube                 1993
+#   Regulate            Warren G & Nate Dogg     1994
+#   I Got 5 On It       Luniz                    1995
+#   Ready Or Not        The Fugees               1996
 #
-# Chapter 1:  Getting Started                page  1
-# Chapter 2:  Numbers                        page  9
-# Chapter 3:  Letters                        page 13
+# TIP #1: Hold all of the information -- song, artist, and year -- in an array.
+#
+# TIP #2: Use the `string.ljust` method from class 2 exercise 7.
+#
+# TIP #3: The width of each line is 50 characters.

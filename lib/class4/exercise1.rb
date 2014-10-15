@@ -1,22 +1,26 @@
 #!/usr/bin/env ruby
 #
-# Section 8.3 on page 56
 # 5 points
 #
-# Write the program we talked about at the beginning of this chapter, one that
-# asks us to type as many words as we want (one word per line, continuing until
-# we just press `Enter` on an empty line) and then repeats the words back to us
-# in alphabetical order. Here's an example of how the program should behave:
+# Write a program that asks the user to type in words to be sorted alphabetally.
+# The user will type one word per line, continuing until `Enter` is pressed on
+# an empty line.
 #
-# Give me some words, and I will sort them:
-# banana
-# apple
-# cherry
+# Then, the program will display the words back to the user in alphabetical
+# order.
 #
-# Sweet! Here they are, sorted:
-# apple
-# banana
-# cherry
+# Here's an example of how the program should behave:
+#
+#   $ ruby exercise1.rb
+#   Type some words to be sorted alphabetically:
+#   banana
+#   apple
+#   cherry
+#
+#   Sweet! Here they are in alphabetical order:
+#   apple
+#   banana
+#   cherry
 #
 # Make sure to test your program thoroughly. For example:
 #
@@ -24,5 +28,10 @@
 # - Even on the first line?
 # - And the second?
 #
-# Hint: There's a lovely array method that will give you a sorted version of
-# an array called `sort`. Use it!
+# TIP: Your program must use the following method:
+#
+#   array.sort  #=> Array
+#
+#     Returns a new Array created by sorting `array`.
+#
+#     ['cat', 'bird'].sort  #=> ['bird', 'cat']

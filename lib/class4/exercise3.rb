@@ -1,17 +1,39 @@
 #!/usr/bin/env ruby
 #
-# Section 9.5 on page 68
 # 5 points
 #
-# That ask method I showed you on page 66 was OK, but I bet you could do better.
-# Try to clean it up by removing the answer variable. You'll have to use return
-# to exit from the loop. (Well, it will get you out of the whole method, but it
-# will get you out of the loop in the process.)
+# Write a program that asks whether or not you like tacos:
 #
-# Hint: I've already structured your program. Aren't you lucky? :)
+# If you reply with 'y', then we're friends:
+#
+#   $ ruby exercise3.rb
+#   Do you like eating tacos? (y or n)
+#   y
+#   We can be friends!
+#
+# If you reply with 'n', then we're enemies:
+#
+#   $ ruby exercise3.rb
+#   Do you like eating tacos? (y or n)
+#   n
+#   Get out of my sight!
+#
+# And if you reply with **anything** else, you have to try again:
+#
+#   $ ruby exercise3.rb
+#   Do you like eating tacos? (y or n)
+#   maybe
+#   Try again
+#   Do you like eating tacos? (y or n)
+#   y
+#   We can be friends!
+#
+# TIP #1: You only need to change the `ask` method.
+#
+# TIP #2: Use `return` to preemptively exit the `ask` method.
 
 def ask(question)
-  question # replace me
+  question # change me
 end
 
-puts ask('Do you like eating tacos?')
+puts ask('Do you like eating tacos? (y or n)')
