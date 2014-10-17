@@ -2,63 +2,75 @@
 #
 # 5 points
 #
-# Extend the playlist program with some user-friendly features.
+# Absolute paths start with a `/`. For example:
 #
-# 1. Allow a user to specify the name of the playlist file as a command line
-# argument. The program should accept file names with and without a .m3u
-# extension. For example:
+#   /Users/tim/sea-c21-ruby
 #
-#   $ ruby 2_build_a_shuffled_playlist_extended.rb salsa
-#   => Build a shuffled playlist
-#   => Created salsa.m3u with 16 songs
+# Relative paths don't start with a `/`. For example
 #
-# If no name is given, the program should output a helpful usage message and
-# immediately exit. For example:
+#   lib/class5/database.yml
 #
-#   $ ruby 2_build_a_shuffled_playlist_extended.rb
-#   Usage: 2_build_a_shuffled_playlist_extended.rb PLAYLIST
+# Write a program that displays the absolute path for anyone's
+# `lib/class5/database.yml` file.
 #
-# 2. If the playlist file already exists, the program should ask the user to
-# either cancel the operation, overwrite the file with new content, or append
-# new content to the end of the file. For example
+# In other words, it needs to calculate an absolute path for
+# `lib/class5/database.yml` that'll work on anyone's filesystem.
 #
-#   $ ruby 2_build_a_shuffled_playlist_extended.rb salsa.m3u
-#   => Build a shuffled playlist
-#   => WARNING: salsa.m3u already exists
-#   => (c)ancel, (o)verwrite, or (a)ppend > c
-#   => Canceled
+# So on Tim's laptop, it works like this:
 #
-#   $ ruby 2_build_a_shuffled_playlist_extended.rb salsa.m3u
-#   => Build a shuffled playlist
-#   => WARNING: salsa.m3u already exists
-#   => (c)ancel, (o)verwrite, or (a)ppend > o
-#   => Overwrote salsa.m3u with 16 songs
+#   $ ruby exercise2.rb
+#   /Users/tim/sea-c21-ruby/lib/class5/database.yml
 #
-#   $ ruby 2_build_a_shuffled_playlist_extended.rb salsa.m3u
-#   => Build a shuffled playlist
-#   => WARNING: salsa.m3u already exists
-#   => (c)ancel, (o)verwrite, or (a)ppend > a
-#   => Appended salsa.m3u with 16 songs
+# And on Eva's laptop, it works like this:
 #
-# A few methods you might find useful are:
+#   $ ruby exercise2.rb
+#   /Users/eva/Projects/sea-c21-ruby/lib/class5/database.yml
 #
-#   String#end_with?(suffix) => true or false
+# TIP: Here are some methods that you may find useful:
 #
-#     Returns true if the string ends with the given suffix, otherwise false.
+#   File.absolute_path(relative)  #=> absolute
 #
-#     'code.rb'.end_with?('.rb')   #=> true
+#     Converts a `relative` path String to an `absolute` path String. Relative
+#     paths are referenced from the current working directory of the running
+#     program.
 #
-#   File.exists?(file_name) => true or false
+#     So, if the program was started in the following directory:
 #
-#     Return true if the named file exists, otherwise false.
+#       /Users/tim/sea-c21-ruby/
 #
-#   File.open(file_name, mode) { |file|  }
+#     Then `File.absolute_path('database.yml')` returns:
 #
-#     Opens file_name with a 'mode' and then passes the opened file to a block.
-#     Possible modes include:
+#       '/Users/tim/sea-c21-ruby/database.yml'
 #
-#     'w'   Truncates an existing file to zero length or creates a new file for
-#           writing.
+#   __FILE__  #=> relative
 #
-#     'a'   Starts at end of a file, if it exists, otherwise creates a new file
-#           for writing.
+#     Returns the `relative` path String of the current Ruby file. Relative
+#     paths are referenced from the current working directory of the running
+#     program.
+#
+#     So, if the program was started in the following directory:
+#
+#       /Users/tim/sea-c21-ruby/
+#
+#     Then `__FILE__` returns:
+#
+#       'lib/class5/exercise2.rb'
+#
+#   File.dirname(long_path)  #=> shorter_path
+#
+#     Returns a `shorter_path` String with all components of the `long_path`
+#     String except the last one.
+#
+#     So if the program called:
+#
+#       File.dirname('/Users/tim/sea-c21-ruby/lib/class5/exercise2.rb')
+#
+#     It would return:
+#
+#       '/Users/tim/sea-c21-ruby/lib/class5/'
+
+def database
+  '/change/me'
+end
+
+puts database
