@@ -8,7 +8,7 @@
 # Then write a program that saves the corporate buzzwords -- in YAML format --
 # to anyone's `lib/class5/database.yml` file and displays the result.
 #
-# So if Tim ran this program successfully:
+# So if Tim runs this program successfully:
 #
 #   $ ruby exercise3.rb
 #   Saved 5 records to /Users/tim/sea-c21-ruby/lib/class5/database.yml

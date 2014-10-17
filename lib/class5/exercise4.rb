@@ -7,7 +7,7 @@
 # Then write a program that loads the corporate buzzwords -- in YAML format --
 # from anyone's `lib/class5/database.yml` file and displays the result.
 #
-# So if Tim ran this program successfully:
+# Here's how it needs to work if Tim runs this program successfully:
 #
 #   $ ruby exercise4.rb
 #   Loaded 5 records from /Users/tim/sea-c21-ruby/lib/class5/database.yml
