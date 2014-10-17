@@ -26,7 +26,7 @@ def database
 end
 
 def load
-  ['change me']
+  ['fix me']
 end
 
 records = load
