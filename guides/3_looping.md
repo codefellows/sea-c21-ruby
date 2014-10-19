@@ -4,15 +4,17 @@
 #### Favor `until` over `while` for negative conditions
 
 ```ruby
+# bad
 year = 1974
 
-# bad
 while year != 2014
   puts 'Maybe next year'
   year += 1
 end
 
 # good
+year = 1974
+
 until year == 2014
   puts 'Maybe next year'
   year += 1
@@ -23,9 +25,9 @@ end
 #### Always put the condition on the same line as the `while/until`
 
 ```ruby
+# bad
 count = 0
 
-# bad
 while
   count < 10
   puts 'Go Hawks!'
@@ -33,6 +35,8 @@ while
 end
 
 # good
+count = 0
+
 while count < 10
   puts 'Go Hawks!'
   count += 1
@@ -43,15 +47,17 @@ end
 #### Don't use parentheses around the condition of an `while/until`
 
 ```ruby
+# bad
 count = 0
 
-# bad
 while (count < 10)
   puts 'Go Hawks!'
   count += 1
 end
 
 # good
+count = 0
+
 while count < 10
   puts 'Go Hawks!'
   count += 1
