@@ -4,7 +4,7 @@
 #### Favor `until` over `while` for negative conditions
 
 ```ruby
-year = 2014
+year = 1974
 
 # bad
 while year != 2014
