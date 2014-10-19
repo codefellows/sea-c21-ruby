@@ -1,27 +1,16 @@
 ## Branching Guidelines
 
 
-#### Use `!` instead of `not`
-
-```ruby
-# bad
-not true
-
-# good
-!true
-```
-
-
 #### Favor modifier usage of `if/unless` when you have a single-line body
 
 ```ruby
 # bad
-if some_condition
-  do_something
+if team == 'Seahawks'
+  puts 'winner'
 end
 
 # good
-do_something if some_condition
+puts 'winner' if team == 'Seahawks'
 ```
 
 
@@ -29,13 +18,10 @@ do_something if some_condition
 
 ```ruby
 # bad
-do_something if !some_condition
-
-# bad
-do_something if not some_condition
+puts 'loser' if team != 'Seahawks'
 
 # good
-do_something unless some_condition
+puts 'loser' unless team == 'Seahawks'
 ```
 
 
@@ -43,17 +29,17 @@ do_something unless some_condition
 
 ```ruby
 # bad
-unless grade >= 80
-  puts 'fail'
+unless team == 'Seahawks'
+  puts 'loser'
 else
-  puts 'pass'
+  puts 'winner'
 end
 
 # good
-if grade >= 80
-  puts 'pass'
+if team == 'Seahawks'
+  puts 'winner'
 else
-  puts 'fail'
+  puts 'loser'
 end
 ```
 
@@ -63,15 +49,15 @@ end
 ```ruby
 # bad
 if
-  some_condition
-  do_something
-  do_something_else
+  team == 'Seahawks'
+  puts 'Go'
+  puts 'Hawks!'
 end
 
 # good
-if some_condition
-  do_something
-  do_something_else
+if team == 'Seahawks'
+  puts 'Go'
+  puts 'Hawks!'
 end
 ```
 
@@ -80,12 +66,14 @@ end
 
 ```ruby
 # bad
-if (chapter == 8)
-  # body omitted
+if (team == 'Seahawks')
+  puts 'Go'
+  puts 'Hawks!'
 end
 
 # good
-if chapter == 8
-  # body omitted
+if team == 'Seahawks'
+  puts 'Go'
+  puts 'Hawks!'
 end
 ```
