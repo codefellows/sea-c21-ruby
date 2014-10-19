@@ -4,10 +4,10 @@
 
 ```ruby
 # bad
-some_method (42)
+rand (42)
 
 # good
-some_method(42)
+rand(42)
 ```
 
 
@@ -15,10 +15,10 @@ some_method(42)
 
 ```ruby
 # bad
-some_method( 42 )
+rand( 42 )
 
 # good
-some_method(42)
+rand(42)
 ```
 
 
@@ -26,13 +26,13 @@ some_method(42)
 
 ```ruby
 # bad
-def some_method()
- # body omitted
+def eat()
+  'Nom nom nom'
 end
 
 # good
-def some_method
- # body omitted
+def eat
+  'Nom nom nom'
 end
 ```
 
@@ -41,13 +41,13 @@ end
 
 ```ruby
 # bad
-def some_method param1, param2
- # body omitted
+def eat food
+  "Mmm, this #{food} is delicious!"
 end
 
 # good
-def some_method(param1, param2)
- # body omitted
+def eat(food)
+  "Mmm, this #{food} is delicious!"
 end
 ```
 
@@ -56,22 +56,22 @@ end
 
 ```ruby
 # doesn't work
-x = 42
+food = 'crab cake'
 
-def some_method
-  x
+def eat
+  "Mmm, this #{food} is delicious!"
 end
 
-some_method # => NameError: undefined local variable or method `x'
+eat # => NameError: undefined local variable or method `food'
 
 # does work
-x = 42
+food = 'crab cake'
 
-def some_method(param)
-  param
+def eat(food)
+  "Mmm, this #{food} is delicious!"
 end
 
-some_method(x) # => 42
+eat(food)  #=> "Mmm, this crab cake is delicious!"
 ```
 
 
@@ -79,20 +79,20 @@ some_method(x) # => 42
 
 ```ruby
 # bad
-def some_method
-  # body omitted
+def eat(food)
+  "Mmm, this #{food} is delicious!"
 end
-def another_method
-  # body omitted
+def drink(beverage)
+  "Ahh, this #{beverage} is refreshing!"
 end
 
 # good
-def some_method
-  # body omitted
+def eat(food)
+  "Mmm, this #{food} is delicious!"
 end
 
-def another_method
-  # body omitted
+def drink(beverage)
+  "Ahh, this #{beverage} is refreshing!"
 end
 ```
 
@@ -101,13 +101,13 @@ end
 
 ```ruby
 # bad
-def some_method
-  return 42
+def drink(beverage)
+  return "Ahh, this #{beverage} is refreshing!"
 end
 
 # good
-def some_method
-  42
+def drink(beverage)
+  "Ahh, this #{beverage} is refreshing!"
 end
 ```
 
@@ -116,17 +116,17 @@ end
 
 ```ruby
 # bad
-def some_method(param)
-  if param == 42
-    true
+def drink(beverage)
+  if beverage == 'wine'
+    'Salute!'
   else
-    false
+    'Cheers!'
   end
 end
 
 # good
 def some_method(param)
-  return true if param == 42
-  false
+  return 'Salute!' if beverage == 'wine'
+  'Cheers!'
 end
 ```

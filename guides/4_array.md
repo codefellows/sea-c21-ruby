@@ -4,10 +4,12 @@
 
 ```ruby
 # bad
-some_array [42]
+friends = ['Julia', 'Chris', 'Anne Marie']
+friends [0]
 
 # good
-some_array[42]
+friends = ['Julia', 'Chris', 'Anne Marie']
+friends[0]
 ```
 
 
@@ -15,10 +17,12 @@ some_array[42]
 
 ```ruby
 # bad
-some_array[ 42 ]
+friends = ['Julia', 'Chris', 'Anne Marie']
+friends[ 0 ]
 
 # good
-some_array[42]
+friends = ['Julia', 'Chris', 'Anne Marie']
+friends[0]
 ```
 
 
@@ -26,11 +30,11 @@ some_array[42]
 
 ```ruby
 # bad
-some_array.length
-some_array.count
+friends.length
+friends.count
 
 # good
-some_array.size
+friends.size
 ```
 
 
