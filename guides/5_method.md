@@ -125,7 +125,7 @@ def drink(beverage)
 end
 
 # good
-def some_method(param)
+def drink(beverage)
   return 'Salute!' if beverage == 'wine'
   'Cheers!'
 end
