@@ -1,7 +1,7 @@
 ## Array Guidelines
 
 
-#### When defining, no spaces after `[` or before `]`
+#### When defining an Array, no spaces after `[` or before `]`
 
 ```ruby
 # bad
@@ -12,7 +12,7 @@ friends = ['Julia', 'Chris', 'Anne Marie']
 ```
 
 
-#### When defining, one space after `,`
+#### When defining an Array, one space after `,`
 
 ```ruby
 # bad
@@ -23,7 +23,7 @@ friends = ['Julia', 'Chris', 'Anne Marie']
 ```
 
 
-#### Always define on same line as the assignment
+#### Always define an Array on same line as the assignment
 
 ```ruby
 # bad
@@ -67,7 +67,7 @@ friends = %w(Julia Chris Sierra)
 ```
 
 
-#### When accessing, no spaces before `[`
+#### When accessing an Array, no spaces before `[`
 
 ```ruby
 # bad
@@ -80,7 +80,7 @@ friends[0]
 ```
 
 
-#### When accessing, no spaces after `[` or before `]`
+#### When accessing an Array, no spaces after `[` or before `]`
 
 ```ruby
 # bad
