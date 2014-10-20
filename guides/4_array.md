@@ -13,11 +13,12 @@ friends = ['Julia', 'Chris', 'Anne Marie']
 ```
 
 
-#### Use one line per element when defining a many elements
+#### Use multi-line definition for too many elements to fit on one line
 
 ```ruby
 # bad
-friends = ['Julia', 'Chris', 'Anne Marie', 'Sierra', 'Ivan', 'Sarah', 'Mary', 'Paul']
+friends = ['Julia', 'Chris', 'Anne Marie', 'Sierra', 'Ivan',
+  'Sarah', 'Mary', 'Paul']
 
 # good
 friends = [
