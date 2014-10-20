@@ -1,7 +1,7 @@
 ## Method Guidelines
 
 
-#### No spaces before `(`
+#### When calling, no spaces before `(`
 
 ```ruby
 # bad
@@ -12,7 +12,7 @@ rand(42)
 ```
 
 
-#### No spaces after `(` or before `)`
+#### When calling, no spaces after `(` or before `)`
 
 ```ruby
 # bad
