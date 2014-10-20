@@ -1,6 +1,28 @@
 ## Array Guidelines
 
 
+#### When defining, no spaces after `[` or before `]`
+
+```ruby
+# bad
+friends = [ 'Julia', 'Chris', 'Anne Marie' ]
+
+# good
+friends = ['Julia', 'Chris', 'Anne Marie']
+```
+
+
+#### When defining, one space after `,`
+
+```ruby
+# bad
+friends = ['Julia','Chris','Anne Marie']
+
+# good
+friends = ['Julia', 'Chris', 'Anne Marie']
+```
+
+
 #### Always define on same line as the assignment
 
 ```ruby
