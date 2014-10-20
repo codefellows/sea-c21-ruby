@@ -1,5 +1,6 @@
 ## Method Guidelines
 
+
 #### No spaces before `(`
 
 ```ruby

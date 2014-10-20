@@ -1,6 +1,50 @@
 ## Array Guidelines
 
-#### No spaces before `[`
+
+#### Always define on same line as the assignment
+
+```ruby
+# bad
+friends =
+  ['Julia', 'Chris', 'Anne Marie']
+
+# good
+friends = ['Julia', 'Chris', 'Anne Marie']
+```
+
+
+#### Use one line per element when defining a many elements
+
+```ruby
+# bad
+friends = ['Julia', 'Chris', 'Anne Marie', 'Sierra', 'Ivan', 'Sarah', 'Mary', 'Paul']
+
+# good
+friends = [
+  'Julia',
+  'Chris',
+  'Anne Marie',
+  'Sierra',
+  'Ivan',
+  'Sarah',
+  'Mary',
+  'Paul'
+]
+```
+
+
+#### Use `%w()` when defining an Array of single-word Strings
+
+```ruby
+# bad
+friends = ['Julia', 'Chris', 'Sierra']
+
+# good
+friends = %w(Julia Chris Sierra)
+```
+
+
+#### When accessing, no spaces before `[`
 
 ```ruby
 # bad
@@ -13,7 +57,7 @@ friends[0]
 ```
 
 
-#### No spaces after `[` or before `]`
+#### When accessing, no spaces after `[` or before `]`
 
 ```ruby
 # bad
