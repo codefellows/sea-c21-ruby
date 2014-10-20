@@ -35,7 +35,7 @@ friends = ['Julia', 'Chris', 'Anne Marie']
 ```
 
 
-#### Use multi-line definition for too many elements to fit on one line
+#### Use multi-line definition when elements can't fit on one line
 
 ```ruby
 # bad
