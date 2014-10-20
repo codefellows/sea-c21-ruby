@@ -120,62 +120,20 @@ end
 **TIP:** Name the parameter `e` for single-line iterator blocks
 
 
-#### Prefer `each` over `for` because of their block scope
-
-```ruby
-# bad
-for item in [1, 2, 3] do
-  puts item
-end
-
-# item is accessible outside the for loop
-item # => 3
-
-# good
-[1, 2, 3].each { |item| puts item }
-
-# item is not accessible outside the each block
-item # => NameError: undefined local variable or method `item'
-```
-
-
-#### Prefer `each` over `for` because of their container's scope
-
-```ruby
-# bad
-item = 99
-
-for item in [1, 2, 3] do
-  puts item
-end
-
-# item is accessible outside the for loop
-item # => 3
-
-# good
-item = 99
-
-[1, 2, 3].each { |item| puts item }
-
-# item is not accessible outside the each block
-item # => 99
-```
-
-
 #### Use `next` to prematurely skip to the next iteration
 
 ```ruby
 # bad
-[1, 2, 3].each do |item|
-  if item >= 2
-    puts item
+[1, 2, 3].each do |element|
+  if element >= 2
+    puts element
   end
 end
 
 # good
-[1, 2, 3].each do |item|
-  next if item < 2
-  puts item
+[1, 2, 3].each do |element|
+  next if element < 2
+  puts element
 end
 ```
 
@@ -184,15 +142,15 @@ end
 
 ```ruby
 # bad
-[1, 2, 3].each do |item|
-  if item < 2
-    puts item
+[1, 2, 3].each do |element|
+  if element < 2
+    puts element
   end
 end
 
 # good
-[1, 2, 3].each do |item|
-  break if item >= 2
-  puts item
+[1, 2, 3].each do |element|
+  break if element >= 2
+  puts element
 end
 ```
