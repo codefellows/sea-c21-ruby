@@ -9,7 +9,7 @@
 # In other words, Ruby data is transformed into a String and saved to a file.
 # Then that String is read from the file and transformed back into Ruby data.
 #
-# In a series of 4 exercises, you'll learn how Ruby serializes data to and from
+# In a series of 5 exercises, you'll learn how Ruby serializes data to and from
 # files.
 #
 # In this exercise, you'll play with YAML -- a human friendly data serialization
