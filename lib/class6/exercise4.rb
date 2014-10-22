@@ -2,54 +2,49 @@
 #
 # 5 points
 #
-# Write a program that reads birth_dates.yml, creates or updates a name and
-# birth date entry, and then saves ALL the birth dates back to birth_dates.yml.
+# Replace the `database` method with your solution from exercise 3.
 #
-# For example:
+# Write a program that loads the person key-value pairs, in YAML format, from
+# anyone's `lib/class6/database.yml` file and then displays each key-value pair.
 #
-#   $ 4_birthday_helper_write.rb Alex 1997 4 22
-#   Birthday 1997-04-22 00:00:00 UTC saved for Alex
+# Here's how it needs to work if Tim runs this program:
 #
-# The program should also handle names that are not capitalized:
+#   $ ruby exercise4.rb
+#   Loaded 4 key-value pairs in /Users/tim/sea-c21-ruby/lib/class6/database.yml
+#   :name => "George Harrison"
+#   :age => 58
+#   :song => "Something"
+#   :url => "https://www.youtube.com/watch?v=UKAp-jRUp2o"
 #
-#   $ ruby 4_birthday_helper_write.rb jane 1984 11 21
-#   Birthday 1984-11-21 00:00:00 UTC saved for Jane
+# TIP #1: See your solution for Class 5 Exercise 4.
 #
-# The program should also be compatible with 3_birthday_helper_read.rb.
+# TIP #2: How do you iterate over key-value pairs in a Hash?
 #
-#   $ ruby 4_birthday_helper_write.rb Frank 1944 1 29
-#   Birthday 1944-01-29 00:00:00 UTC saved for Frank
+# TIP #3: Here's a method you may find useful:
 #
-#   $ ruby 3_birthday_helper_read.rb Frank
-#   Frank will be 71 on 2015-01-29
+#   object.inspect  #=> String
 #
-# A few methods that may help you:
+#     Returns a human-readable String of the Ruby `object`.
 #
-#   File.open(file_path, 'w') do |file| ... end
-#
-#     Opens the file_path for writing and allows the block to write String.
-#     content to the file.
-#
-#     File.open('file.txt', 'w') do |file|
-#       file.write 'Hello world'
-#     end
-#
-#   YAML.dump(obj) => String
-#
-#     Parses an Object and returns a YAML formatted string.
-#
-#     YAML.dump('foo')                #=> "--- foo\n...\n"
-#     YAML.dump({ 'foo' => 'bar' })   #=> "---\nfoo: bar\n"
+#     9000.inspect  #=> '9000'
+#     'hi'.inspect  #=> '"hi"'
 
 require 'yaml'
 
-name = ARGV[0]
-year = ARGV[1].to_i
-month = ARGV[2].to_i
-day = ARGV[3].to_i
-
-if name.nil? || year == 0 || month == 0 || day == 0
-  abort 'Usage: 4_birthday_helper_write.rb NAME YEAR MONTH DAY'
+def database
+  '/replace/me'
 end
 
-# replace me
+def load
+  { fix: 'me' }
+end
+
+def display(pairs)
+  false # fix me
+end
+
+person = load
+
+puts "Loaded #{person.size} key-value pairs in #{database}"
+
+display(person)

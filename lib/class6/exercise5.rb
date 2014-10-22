@@ -2,103 +2,46 @@
 #
 # 5 points
 #
-# Write a program that converts a roman numeral to an arabic number. Come on,
-# you knew this was coming. It's time for redemption!
+# Replace the `database` and `load` methods with your solutions from exercise 4.
+#
+# Write a program that, when given a key, displays the matching key-value pair.
 #
 # For example:
 #
-#   $ ruby 5_arabic_numbers.rb mcmxcix
-#   1999
+#   $ ruby exercise5.rb name
+#   Found 1 key-value pair in /Users/tim/sea-c21-ruby/lib/class6/database.yml
+#   :name => "George Harrison"
 #
-# The program should handle both lowercase and uppercase roman numerals:
+# And if no matching key exists, it needs to display an error message:
 #
-#   $ ruby 5_arabic_numbers.rb CDXLIV
-#   444
+#   $ ruby exercise5.rb pet
+#   Could't find key :pet in /Users/tim/sea-c21-ruby/lib/class6/database.yml
 #
-# And reject strings that aren't valid Roman numerals:
-#
-#   $ ruby 5_arabic_numbers.rb bigboi
-#   Invalid roman numeral 'bigboi'
-#
-# HINT: Draw first, program second. Ask yourself the following questions:
-#
-#   What are the base cases?
-#   How would I solve it by hand?
-#   What patterns are emerging from my solution?
-#   What are the operations within the pattern?
-#   How do I know when to move on?
-#   How do I know when to stop?
-#
-# Roman numearls to Arabic numbers:
-#
-#   M  => 1000
-#   CM => 900
-#   D  => 500
-#   CD => 400
-#   C  => 100
-#   XC => 90
-#   L  => 50
-#   XL => 40
-#   X  => 10
-#   IX => 9
-#   V  => 5
-#   IV => 4
-#   I  => 1
-#
-# A few methods that may help:
-#
-#   Hash#each do |key, value| ... end
-#
-#     Iterates over a Hash, assigning key and value for each key-value pair.
-#
-#     { 'a' => 1, 'b' => 2 }.each do |key, value|
-#       puts "#{key} #{value}"
-#     end
-#
-#     Output:
-#
-#     a 1
-#     b 2
-#
-#   String#cut(match) => String
-#
-#     Returns a String of all occurances of match removed from the front.
-#
-#     'aabbcc'.cut('a')   #=> 'aa'
-#     'aabbcc'.cut('aa')  #=> 'aa'
-#     'aabbcc'.cut('b')   #=> ''
-#
-#   String#[Range] => String
-#
-#     Returns a substring containing characters starting and finishing at the
-#     Range's min and max.
-#
-#     'hello'[0..0]   #=> 'h'
-#     'hello'[0..1]   #=> 'he'
-#     'hello'[0..2]   #=> 'hel'
-#     'hello'[1..1]   #=> 'e'
-#     'hello'[1..2]   #=> 'el'
-#     'hello'[1..3]   #=> 'ell'
-#
-#   String#empty? => true or false
-#
-#     Returns true if it's the empty String, otherwise false.
-#
-#     ''.empty?   #=> true
-#     'a'.empty?  #=> false
+# TIP: How do you fetch a value with a key from a Hash?
 
-def arabic_number(num)
-  num # replace me
+require 'yaml'
+
+def database
+  '/replace/me'
 end
 
-class String
-  def cut(str)
-    slice(/^(#{str})*/)
-  end
+def load
+  { replace: 'me' }
 end
 
-input = ARGV.first
+def find(key)
+  'fix me'
+end
 
-abort 'Usage: 5_arabic_numbers.rb ROMAN_NUMERAL' if input.nil?
+input = ARGV[0]
 
-puts arabic_number(input)
+abort 'Usage: exercise4.rb KEY' unless input
+
+result = find(input)
+
+if result
+  puts "Found 1 key-value pair in #{database}"
+  puts ":#{input} => #{result.inspect}"
+else
+  puts "Could't find key :#{input} in #{database}"
+end

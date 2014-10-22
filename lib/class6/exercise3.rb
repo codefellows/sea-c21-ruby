@@ -2,52 +2,42 @@
 #
 # 5 points
 #
-# Write a program that reads in names and birth dates from birth_dates.yml.
-# Given a name, it should output when that person's next birthday will be and
-# how old they will be.
+# Replace the `person` and `database` methods with your solutions from
+# exercises 1 and 2.
 #
-# For example:
+# Write a program that saves the person key-value pairs, in YAML format, to
+# anyone's `lib/class6/database.yml` file and displays the result.
 #
-#   $ 3_birthday_helper_read.rb Alex
-#   Alex will be 78 on 2014-10-04
+# So if Tim runs this program successfully:
 #
-# The program should also handle names that are not capitalized:
+#   $ ruby exercise3.rb
+#   Saved 4 key-value pairs to /Users/tim/sea-c21-ruby/lib/class6/database.yml
 #
-#   $ ruby 3_birthday_helper_read.rb jane
-#   Jane will be 56 on 2015-03-27
+# Then his database needs to contain the following YAML content:
 #
-# And reject names that don't have a birth date:
+#   $ cat database.yml
+#   ---
+#   :name: George Harrison
+#   :age: 58
+#   :song: Something
+#   :url: https://www.youtube.com/watch?v=UKAp-jRUp2o
 #
-#   $ ruby 3_birthday_helper_read.rb Andre3000
-#   Unknown birth date for 'Andre3000'
-#
-# Hint: Represent a birth date as a Time on midnight in UTC.
-#
-# A few methods that may help you:
-#
-#   File.read(file_path) => String
-#
-#     Opens the file_path and returns the contents as a String.
-#
-#     File.read('file.txt')  #=> 'Hello world!'
-#
-#   YAML.load(str) => Object
-#
-#     Parses a YAML formatted string and returns the resulting Object.
-#
-#     YAML.load('--- foo')          #=> 'foo'
-#     YAML.load("---\nfoo: bar\n")  #=> { 'foo' => 'bar' }
-#
-#   Time#strftime('%F') => String
-#
-#     Returns a Time as a String in YYYY-MM-DD format
-#
-#     Time.new.utc.strftime('%F')   #=> '2014-07-23'
+# TIP: See your solution for Class 5 Exercise 3.
 
 require 'yaml'
 
-name = ARGV.first
+def person
+  { replace: 'me' }
+end
 
-abort 'Usage: 3_birthday_helper_read.rb NAME' if name.nil?
+def database
+  '/replace/me'
+end
 
-# replace me
+def save
+  false # fix me
+end
+
+save
+
+puts "Saved #{person.size} key-value pairs to #{database}"
