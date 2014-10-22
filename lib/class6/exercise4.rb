@@ -40,7 +40,7 @@ def load
 end
 
 def display(pairs)
-  false # fix me
+  pairs # fix me
 end
 
 person = load

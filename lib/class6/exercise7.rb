@@ -31,7 +31,7 @@ def load
 end
 
 def remove(key)
-  'fix me'
+  key # fix me
 end
 
 input = ARGV[0]

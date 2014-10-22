@@ -30,7 +30,7 @@ def load
 end
 
 def update(key, value)
-  false # fix me
+  key + value # fix me
 end
 
 input1, input2 = ARGV

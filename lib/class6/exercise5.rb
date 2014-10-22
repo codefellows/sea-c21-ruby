@@ -30,7 +30,7 @@ def load
 end
 
 def find(key)
-  'fix me'
+  key # fix me
 end
 
 input = ARGV[0]
