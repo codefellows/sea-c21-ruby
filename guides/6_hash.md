@@ -22,7 +22,7 @@
 ```
 
 
-#### Avoid using a comma after the last item of a literal
+#### No comma after the last key-value pair
 
 ```ruby
 # bad
@@ -31,7 +31,6 @@
 # good
 { "one" => 1, "two" => 2 }
 ```
-
 
 
 #### Align `=>` for multi-line Hash literals
@@ -57,10 +56,12 @@
 
 ```ruby
 # bad
-some_hash ["key"]
+numbers = { "one" => 1, "two" => 2 }
+numbers ["one"]
 
 # good
-some_hash["key"]
+numbers = { "one" => 1, "two" => 2 }
+numbers["key"]
 ```
 
 
@@ -68,10 +69,12 @@ some_hash["key"]
 
 ```ruby
 # bad
-some_hash[ "key" ]
+numbers = { "one" => 1, "two" => 2 }
+numbers[ "one" ]
 
 # good
-some_hash["key"]
+numbers = { "one" => 1, "two" => 2 }
+numbers["one"]
 ```
 
 
@@ -79,11 +82,11 @@ some_hash["key"]
 
 ```ruby
 # bad
-some_hash.length
-some_hash.count
+numbers.length
+numbers.count
 
 # good
-some_hash.size
+numbers.size
 ```
 
 
@@ -106,11 +109,12 @@ end
 
 ```ruby
 # bad
-some_hash.each { |k, v| puts v }
+{ "one" => 1, "two" => 2 }.each { |k, v| puts v }
 
 # good
-some_hash.each { |_, v| puts v }
+{ "one" => 1, "two" => 2 }.each { |_, v| puts v }
 ```
+
 
 #### Use `next` to prematurely skip to the next iteration
 
@@ -152,22 +156,8 @@ end
 
 ```ruby
 # bad
-{ "two" => 2, "one" => 1 }.each { |k, v| puts "#{k} is #{v}" }
+{ "February" => 28, "Janurary" => 31 }.each { |k, v| puts "#{k} is #{v}" }
 
 # good
-{ "one" => 1, "two" => 2 }.each { |k, v| puts "#{k} is #{v}" }
-```
-
-
-#### Never modify while iterating
-
-```ruby
-some_hash = { "one" => 1, "two" => 2 }
-
-# bad
-some_hash.each { |key, value| some_hash[key] = value + 1 }
-
-# good
-temp = {}
-some_hash.each { |key, value| temp[key] = value + 1 }
+{ "Janurary" => 31, "February" => 28 }.each { |k, v| puts "#{k} is #{v}" }
 ```
