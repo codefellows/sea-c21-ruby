@@ -1,13 +1,14 @@
 ## Hash Guidelines
 
+
 #### One space after `{` and before `}`
 
 ```ruby
 # bad
-{"one" => 1, "two" => 2}
+{'dogs' => 1, 'cats' => 2}
 
 # good
-{ "one" => 1, "two" => 2 }
+{ 'dogs' => 1, 'cats' => 2 }
 ```
 
 
@@ -15,10 +16,10 @@
 
 ```ruby
 # bad
-{ "one"=>1, "two"=>2 }
+{ 'dogs'=>1, 'cats'=>2 }
 
 # good
-{ "one" => 1, "two" => 2 }
+{ 'dogs' => 1, 'cats' => 2 }
 ```
 
 
@@ -26,10 +27,10 @@
 
 ```ruby
 # bad
-{ "one" => 1, "two" => 2, }
+{ 'dogs' => 1, 'cats' => 2, }
 
 # good
-{ "one" => 1, "two" => 2 }
+{ 'dogs' => 1, 'cats' => 2 }
 ```
 
 
@@ -38,16 +39,16 @@
 ```ruby
 # bad
 {
-  "one" => 1,
-  "two" => 2,
-  "three" => 3
+  'dogs' => 1,
+  'cats' => 2,
+  'bunnies' => 3
 }
 
 # good
 {
-  "one"   => 1,
-  "two"   => 2,
-  "three" => 3
+  'dogs'    => 1,
+  'cats'    => 2,
+  'bunnies' => 3
 }
 ```
 
@@ -56,12 +57,12 @@
 
 ```ruby
 # bad
-numbers = { "one" => 1, "two" => 2 }
-numbers ["one"]
+pets = { 'dogs' => 1, 'cats' => 2 }
+pets ['dogs']
 
 # good
-numbers = { "one" => 1, "two" => 2 }
-numbers["key"]
+pets = { 'dogs' => 1, 'cats' => 2 }
+pets['dogs']
 ```
 
 
@@ -69,24 +70,26 @@ numbers["key"]
 
 ```ruby
 # bad
-numbers = { "one" => 1, "two" => 2 }
-numbers[ "one" ]
+pets = { 'dogs' => 1, 'cats' => 2 }
+pets[ 'dogs' ]
 
 # good
-numbers = { "one" => 1, "two" => 2 }
-numbers["one"]
+pets = { 'dogs' => 1, 'cats' => 2 }
+pets['dogs']
 ```
 
 
 #### Prefer `size` over `length` and `count`
 
 ```ruby
+pets = { 'dogs' => 1, 'cats' => 2 }
+
 # bad
-numbers.length
-numbers.count
+pets.length
+pets.count
 
 # good
-numbers.size
+pets.size
 ```
 
 
@@ -94,12 +97,12 @@ numbers.size
 
 ```ruby
 # bad
-{ "one" => 1, "two" => 2 }.each do |key, value|
+{ 'dogs' => 1, 'cats' => 2 }.each do |key, value|
   puts key + value
 end
 
 # good
-{ "one" => 1, "two" => 2 }.each { |k, v| puts k + v }
+{ 'dogs' => 1, 'cats' => 2 }.each { |k, v| puts k + v }
 ```
 
 **TIP:** Name the parameters `k` and `v` for single-line iterator blocks
@@ -109,10 +112,10 @@ end
 
 ```ruby
 # bad
-{ "one" => 1, "two" => 2 }.each { |k, v| puts v }
+{ 'dogs' => 1, 'cats' => 2 }.each { |k, v| puts v }
 
 # good
-{ "one" => 1, "two" => 2 }.each { |_, v| puts v }
+{ 'dogs' => 1, 'cats' => 2 }.each { |_, v| puts v }
 ```
 
 
@@ -120,14 +123,14 @@ end
 
 ```ruby
 # bad
-{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+{ 'one' => 1, 'two' => 2, 'three' => 3 }.each do |key, value|
   if value >= 2
     puts key
   end
 end
 
 # good
-{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+{ 'dogs' => 1, 'cats' => 2, 'bunnies' => 3 }.each do |key, value|
   next if value < 2
   puts key
 end
@@ -138,14 +141,14 @@ end
 
 ```ruby
 # bad
-{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+{ 'dogs' => 1, 'cats' => 2, 'bunnies' => 3 }.each do |key, value|
   if value < 2
     puts key
   end
 end
 
 # good
-{ "one" => 1, "two" => 2, "three" => 3 }.each do |key, value|
+{ 'dogs' => 1, 'cats' => 2, 'bunnies' => 3 }.each do |key, value|
   break if value >= 2
   puts key
 end
@@ -156,8 +159,8 @@ end
 
 ```ruby
 # bad
-{ "February" => 28, "Janurary" => 31 }.each { |k, v| puts "#{k} is #{v}" }
+{ 'February' => 28, 'Janurary' => 31 }.each { |k, v| puts "#{k} is #{v}" }
 
 # good
-{ "Janurary" => 31, "February" => 28 }.each { |k, v| puts "#{k} is #{v}" }
+{ 'Janurary' => 31, 'February' => 28 }.each { |k, v| puts "#{k} is #{v}" }
 ```
