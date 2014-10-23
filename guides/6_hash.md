@@ -123,7 +123,7 @@ end
 
 ```ruby
 # bad
-{ 'one' => 1, 'two' => 2, 'three' => 3 }.each do |key, value|
+{ 'dogs' => 1, 'cats' => 2, 'bunnies' => 3 }.each do |key, value|
   if value >= 2
     puts key
   end
