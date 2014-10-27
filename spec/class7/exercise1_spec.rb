@@ -90,15 +90,15 @@ RSpec.describe Integer do
   end
 
   it 'transforms 20 into a roman numeral' do
-    expect(10.to_roman).to eq('XX')
+    expect(20.to_roman).to eq('XX')
   end
 
   it 'transforms 30 into a roman numeral' do
-    expect(10.to_roman).to eq('XXX')
+    expect(30.to_roman).to eq('XXX')
   end
 
   it 'transforms 40 into a roman numeral' do
-    expect(10.to_roman).to eq('XL')
+    expect(40.to_roman).to eq('XL')
   end
 
   it 'transforms 50 into a roman numeral' do
@@ -146,15 +146,15 @@ RSpec.describe Integer do
   end
 
   it 'transforms 700 into a roman numeral' do
-    expect(700.to_roman).to eq('DC')
+    expect(700.to_roman).to eq('DCC')
   end
 
   it 'transforms 800 into a roman numeral' do
-    expect(800.to_roman).to eq('DCC')
+    expect(800.to_roman).to eq('DCCC')
   end
 
   it 'transforms 900 into a roman numeral' do
-    expect(900.to_roman).to eq('MC')
+    expect(900.to_roman).to eq('CM')
   end
 
   it 'transforms 1000 into a roman numeral' do
