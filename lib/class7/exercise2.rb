@@ -8,7 +8,7 @@
 #
 #     Sets it's @fruit instance variable to 50.
 #
-#   OrangeTree#fruit => Integer
+#   OrangeTree#fruit #=> Integer
 #
 #     Returns the value of the @fruit instance variable
 #

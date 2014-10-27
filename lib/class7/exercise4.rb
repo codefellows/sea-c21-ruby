@@ -17,7 +17,7 @@
 #
 # And extend the OrangeTree class with the following method:
 #
-#   OrangeTree#==(other) => true or false
+#   OrangeTree#==(other) #=> true or false
 #
 #     Given another object, returns `true` if both objects have the same amount
 #     of `fruit`. Otherwise, returns `false`.

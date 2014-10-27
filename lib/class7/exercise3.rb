@@ -4,7 +4,7 @@
 #
 # Copy the previous OrangeTree class and extend it with the following method:
 #
-#   OrangeTree#pick!(amount = 1) => Integer or nil
+#   OrangeTree#pick!(amount = 1) #=> Integer or nil
 #
 #     Returns nil if @fruit is less than the `amount` to pick.
 #     Otherwise, subtracts the `amount` from @fruit and returns it's new value.

@@ -4,7 +4,7 @@
 #
 # Copy the previous OrangeTree class and extend it with the following method:
 #
-#   OrangeTree#pick(amount = 1) => OrangeTree
+#   OrangeTree#pick(amount = 1) #=> OrangeTree
 #
 #     Returns itself if `@fruit` is less than the `amount` to pick.
 #     Otherwise, returns a new OrangeTree object with it's fruit instance
@@ -19,7 +19,7 @@
 #     orange_tree.pick(51)  #=> orange_tree
 #     orange_tree.fruit     #=> 50
 #
-# Hint: To successfully complete this exercise, an OrangeTree object's @fruit
+# TIP: To successfully complete this exercise, an OrangeTree object's @fruit
 # instance variable should be assigned once and only once.
 #
 # Where should it be assigned? From within the initialize method. Once assigned,

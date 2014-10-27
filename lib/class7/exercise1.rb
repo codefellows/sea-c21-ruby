@@ -4,13 +4,13 @@
 #
 # The following five methods must be fixed:
 #
-#   Integer#hours_in_seconds => Integer
+#   Integer#hours_in_seconds #=> Integer
 #
 #     Returns the number of hours converted to seconds.
 #
 #     10.hours_in_seconds  #=> 36_000
 #
-#   String#indent(amount = 2) => String
+#   String#indent(amount = 2) #=> String
 #
 #     Returns `amount` spaces plus the String. The default `amount` is 2.
 #
@@ -23,13 +23,13 @@
 #
 #     1999.to_roman  #=> 'MCMXCIX'
 #
-#   Array#second => Object
+#   Array#second #=> Object
 #
 #     Returns the second element of the Array.
 #
 #     [10, 20, 30].second  #=> 20
 #
-#   Array#third => Object
+#   Array#third #=> Object
 #
 #     Returns the third element of the Array.
 #
