@@ -31,7 +31,7 @@ RSpec.describe OrangeTree do
       expect(orange_tree.fruit).to eq(0)
     end
 
-    it 'failts to pick 51 fruit and has 50 @fruit remaining' do
+    it 'fails to pick 51 fruit and has 50 @fruit remaining' do
       expect(orange_tree.pick!(51)).to be_nil
       expect(orange_tree.fruit).to eq(50)
     end
