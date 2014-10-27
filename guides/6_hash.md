@@ -53,7 +53,7 @@
 ```
 
 
-#### No spaces before `[`
+#### No spaces before `[` when accessing by a key
 
 ```ruby
 # bad
@@ -66,7 +66,7 @@ pets['dogs']
 ```
 
 
-#### No spaces after `[` or before `]`
+#### No spaces after `[` or before `]` when accessing by a key
 
 ```ruby
 # bad
@@ -108,15 +108,30 @@ end
 **TIP:** Name the parameters `k` and `v` for single-line iterator blocks
 
 
-#### Use `_` for unused block parameters
+#### Prefer `each_key` when iterating over just keys
 
 ```ruby
 # bad
-{ 'dogs' => 1, 'cats' => 2 }.each { |k, v| puts v }
+{ 'dogs' => 1, 'cats' => 2 }.each { |k, _v| puts k }
 
 # good
-{ 'dogs' => 1, 'cats' => 2 }.each { |_, v| puts v }
+{ 'dogs' => 1, 'cats' => 2 }.each_key { |k| puts k }
 ```
+
+**TIP:** It's good style to prefix unused variables with an `_`
+
+
+#### Prefer `each_value` when iterating over just values
+
+```ruby
+# bad
+{ 'dogs' => 1, 'cats' => 2 }.each { |_k, v| puts v }
+
+# good
+{ 'dogs' => 1, 'cats' => 2 }.each_value { |v| puts v }
+```
+
+**TIP:** It's good style to prefix unused variables with an `_`
 
 
 #### Use `next` to prematurely skip to the next iteration
