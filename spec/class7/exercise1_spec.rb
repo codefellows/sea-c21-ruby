@@ -12,7 +12,7 @@ RSpec.describe Integer do
 
   hours_in_seconds.each do |hour, second|
     it "calculates #{hour} hours in seconds" do
-      expect(hour.hours_in_seconds).to eq(seconds)
+      expect(hour.hours_in_seconds).to eq(second)
     end
   end
 end
