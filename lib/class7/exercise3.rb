@@ -12,8 +12,13 @@
 #
 #     orange_tree = OrangeTree.new
 #     orange_tree.fruit      #=> 50
+#
 #     orange_tree.pick!      #=> 49
+#     orange_tree.fruit      #=> 49
+#
 #     orange_tree.pick!(5)   #=> 44
+#     orange_tree.fruit      #=> 44
+#
 #     orange_tree.pick!(50)  #=> nil
 #     orange_tree.fruit      #=> 44
 
