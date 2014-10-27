@@ -1,19 +1,28 @@
 require 'class7/exercise1'
 
 RSpec.describe Integer do
-  hours_in_seconds = {
-    24 => 86_400,
-    12 => 43_200,
-     6 => 21_600,
-     3 => 10_800,
-     1 =>  3_600,
-     0 =>      0
-  }
+  it 'calculates 24 hours in seconds' do
+    expect(24.hours_in_seconds).to eq(86_400)
+  end
 
-  hours_in_seconds.each do |hour, second|
-    it "calculates #{hour} hours in seconds" do
-      expect(hour.hours_in_seconds).to eq(second)
-    end
+  it 'calculates 12 hours in seconds' do
+    expect(12.hours_in_seconds).to eq(43_200)
+  end
+
+  it 'calculates 6 hours in seconds' do
+    expect(6.hours_in_seconds).to eq(21_600)
+  end
+
+  it 'calculates 3 hours in seconds' do
+    expect(3.hours_in_seconds).to eq(10_800)
+  end
+
+  it 'calculates 1 hour in seconds' do
+    expect(1.hours_in_seconds).to eq(3600)
+  end
+
+  it 'calculates 0 hours in seconds' do
+    expect(0.hours_in_seconds).to eq(0)
   end
 end
 
@@ -40,43 +49,124 @@ RSpec.describe String do
 end
 
 RSpec.describe Integer do
-  arabics_to_romans = {
-       1 => 'I',
-       2 => 'II',
-       3 => 'III',
-       4 => 'IV',
-       5 => 'V',
-       6 => 'VI',
-       7 => 'VII',
-       8 => 'VIII',
-       9 => 'IX',
-      10 => 'X',
-      20 => 'XX',
-      30 => 'XXX',
-      40 => 'XL',
-      50 => 'L',
-      60 => 'LX',
-      70 => 'LXX',
-      80 => 'LXXX',
-      90 => 'XC',
-     100 => 'C',
-     200 => 'CC',
-     300 => 'CCC',
-     400 => 'CD',
-     500 => 'D',
-     600 => 'DC',
-     700 => 'DCC',
-     800 => 'DCCC',
-     900 => 'CM',
-    1000 => 'M',
-     444 => 'CDXLIV',
-     999 => 'CMXCIX'
-  }
+  it 'transforms 1 into a roman numeral' do
+    expect(1.to_roman).to eq('I')
+  end
 
-  arabics_to_romans.each do |arabic, roman|
-    it "transforms #{arabic} into a Roman numeral" do
-      expect(arabic.to_roman).to eq(roman)
-    end
+  it 'transforms 2 into a roman numeral' do
+    expect(2.to_roman).to eq('II')
+  end
+
+  it 'transforms 3 into a roman numeral' do
+    expect(3.to_roman).to eq('III')
+  end
+
+  it 'transforms 4 into a roman numeral' do
+    expect(4.to_roman).to eq('IV')
+  end
+
+  it 'transforms 5 into a roman numeral' do
+    expect(5.to_roman).to eq('V')
+  end
+
+  it 'transforms 6 into a roman numeral' do
+    expect(6.to_roman).to eq('VI')
+  end
+
+  it 'transforms 7 into a roman numeral' do
+    expect(7.to_roman).to eq('VII')
+  end
+
+  it 'transforms 8 into a roman numeral' do
+    expect(8.to_roman).to eq('VIII')
+  end
+
+  it 'transforms 9 into a roman numeral' do
+    expect(9.to_roman).to eq('IX')
+  end
+
+  it 'transforms 10 into a roman numeral' do
+    expect(10.to_roman).to eq('X')
+  end
+
+  it 'transforms 20 into a roman numeral' do
+    expect(10.to_roman).to eq('XX')
+  end
+
+  it 'transforms 30 into a roman numeral' do
+    expect(10.to_roman).to eq('XXX')
+  end
+
+  it 'transforms 40 into a roman numeral' do
+    expect(10.to_roman).to eq('XL')
+  end
+
+  it 'transforms 50 into a roman numeral' do
+    expect(50.to_roman).to eq('L')
+  end
+
+  it 'transforms 60 into a roman numeral' do
+    expect(60.to_roman).to eq('LX')
+  end
+
+  it 'transforms 70 into a roman numeral' do
+    expect(70.to_roman).to eq('LXX')
+  end
+
+  it 'transforms 80 into a roman numeral' do
+    expect(80.to_roman).to eq('LXXX')
+  end
+
+  it 'transforms 90 into a roman numeral' do
+    expect(90.to_roman).to eq('XC')
+  end
+
+  it 'transforms 100 into a roman numeral' do
+    expect(100.to_roman).to eq('C')
+  end
+
+  it 'transforms 200 into a roman numeral' do
+    expect(200.to_roman).to eq('CC')
+  end
+
+  it 'transforms 300 into a roman numeral' do
+    expect(300.to_roman).to eq('CCC')
+  end
+
+  it 'transforms 400 into a roman numeral' do
+    expect(400.to_roman).to eq('CD')
+  end
+
+  it 'transforms 500 into a roman numeral' do
+    expect(500.to_roman).to eq('D')
+  end
+
+  it 'transforms 600 into a roman numeral' do
+    expect(600.to_roman).to eq('DC')
+  end
+
+  it 'transforms 700 into a roman numeral' do
+    expect(700.to_roman).to eq('DC')
+  end
+
+  it 'transforms 800 into a roman numeral' do
+    expect(800.to_roman).to eq('DCC')
+  end
+
+  it 'transforms 900 into a roman numeral' do
+    expect(900.to_roman).to eq('MC')
+  end
+
+  it 'transforms 1000 into a roman numeral' do
+    expect(1000.to_roman).to eq('M')
+  end
+
+  it 'transforms 444 into a roman numeral' do
+    expect(444.to_roman).to eq('CDXLIV')
+  end
+
+  it 'transforms 999 into a roman numeral' do
+    expect(999.to_roman).to eq('CMXCIX')
   end
 end
 
