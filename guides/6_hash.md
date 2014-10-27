@@ -174,8 +174,8 @@ end
 
 ```ruby
 # bad
-{ 'February' => 28, 'Janurary' => 31 }.each { |k, v| puts "#{k} is #{v}" }
+{ 'February' => 28, 'Janurary' => 31 }.each { |k, v| puts "#{k} has #{v} days" }
 
 # good
-{ 'Janurary' => 31, 'February' => 28 }.each { |k, v| puts "#{k} is #{v}" }
+{ 'Janurary' => 31, 'February' => 28 }.each { |k, v| puts "#{k} has #{v} days" }
 ```
