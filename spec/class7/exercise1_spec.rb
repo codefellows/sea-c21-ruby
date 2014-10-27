@@ -36,7 +36,7 @@ RSpec.describe String do
   end
 
   it 'indents foo by 1 space' do
-    expect('foo'.indent(1)).to eq('  foo')
+    expect('foo'.indent(1)).to eq(' foo')
   end
 
   it 'indents foo by 0 spaces' do
