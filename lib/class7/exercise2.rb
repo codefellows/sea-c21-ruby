@@ -16,5 +16,5 @@
 #     orange_tree.fruit  #=> 50
 
 class OrangeTree
-  # replace me
+  # fix me
 end

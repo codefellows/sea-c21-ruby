@@ -89,7 +89,7 @@ RSpec.describe OrangeTree do
     end
 
     it 'picks 51 fruit and has 50 @fruit remaining' do
-      expect(orange_tree.pick(51)).to eq(orange_tree)
+      expect(orange_tree.pick(51)).to be_nil
       expect(orange_tree.fruit).to eq(50)
     end
 
