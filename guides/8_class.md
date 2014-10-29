@@ -5,18 +5,11 @@
 
 ```ruby
 # bad
-class Someclass
-  # body omitted
-end
-
-# bad
-class Some_Class
-  # body omitted
+class Comicbook
 end
 
 # good
-class SomeClass
-  # body omitted
+class ComicBook
 end
 ```
 
@@ -25,13 +18,11 @@ end
 
 ```ruby
 # bad
-class SomeHttp
-  # body omitted
+class AtmCard
 end
 
 # good
-class SomeHTTP
-  # body omitted
+class ATMCard
 end
 ```
 
@@ -39,23 +30,21 @@ end
 #### Define one class per source file
 
 ```ruby
-# bad: some_class.rb
-class SomeClass
-  # body omitted
+# bad
+# file: comic_book.rb
+class ComicBook
 end
 
-class AnotherClass
-  # body omitted
+class Artist
 end
 
-# good: some_class.rb
-class SomeClass
-  # body omitted
+# good
+# file: comic_book.rb
+class ComicBook
 end
 
-# good: another_class.rb
-class AnotherClass
-  # body omitted
+# file: artist.rb
+class Artist
 end
 ```
 
@@ -64,11 +53,11 @@ end
 
 ```ruby
 # bad
-someClass.rb
+comicBook.rb
 
 
 # good
-some_class.rb
+comic_book.rb
 ```
 
 
@@ -99,7 +88,34 @@ end
 **TIP:** Omit parentheses for methods that have "keyword" status
 
 
-#### Prefer getter methods over using instance variables directly
+#### Use `attr_writer` to define trivial setter methods
+
+```ruby
+# bad
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def name=(name)
+    @name = name
+  end
+end
+
+# good
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  attr_writer :name
+end
+```
+
+**TIP:** Omit parentheses for methods that have "keyword" status
+
+
+#### Use `attr_accessor` to define trivial getter and setter methods
 
 ```ruby
 # bad
@@ -109,16 +125,13 @@ class Person
   end
 
   def name
-    "#{@name}-san"
+    @name
   end
 
-  def greet
-    puts "Konnichiwa #{@name}"
+  def name=(name)
+    @name = name
   end
 end
-
-person = Person.new("Sierra")
-person.greet  #=> "Konnichiwa Sierra"
 
 # good
 class Person
@@ -126,18 +139,50 @@ class Person
     @name = name
   end
 
-  def name
-    "#{@name}-san"
+  attr_accessor :name
+end
+```
+
+**TIP:** Omit parentheses for methods that have "keyword" status
+
+
+#### Prefer getter methods over using instance variables directly
+
+```ruby
+# bad
+class Person
+  def initialize(name)
+    @name = name
   end
 
+  attr_reader :name
+
   def greet
-    puts "Konnichiwa #{name}"
+    puts "Hello #{@name}"
   end
 end
 
-person = Person.new("Sierra")
-person.greet  #=> "Konnichiwa Sierra-san"
+person = Person.new('Sierra')
+person.greet  #=> "Hello Sierra"
+
+# good
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  attr_reader :name
+
+  def greet
+    puts "Hello #{name}"
+  end
+end
+
+person = Person.new('Sierra')
+person.greet  #=> "Hello Sierra"
 ```
+
+**TIP:** "NameError: undefined local variable or method" means just that.
 
 
 #### Avoid using `self` when calling internal methods
@@ -149,17 +194,15 @@ class Person
     @name = name
   end
 
-  def name
-    "#{@name}-san"
-  end
+  attr_reader :name
 
   def greet
-    puts "Konnichiwa #{self.name}"
+    puts "Hello #{self.name}"
   end
 end
 
-person = Person.new("Sierra")
-person.greet  #=> "Konnichiwa Sierra-san"
+person = Person.new('Sierra')
+person.greet  #=> "Hello Sierra"
 
 # good
 class Person
@@ -167,92 +210,13 @@ class Person
     @name = name
   end
 
-  def name
-    "#{@name}-san"
-  end
+  attr_reader :name
 
   def greet
-    puts "Konnichiwa #{name}"
+    puts "Hello #{name}"
   end
 end
 
-person = Person.new("Sierra")
-person.greet  #=> "Konnichiwa Sierra-san"
+person = Person.new('Sierra')
+person.greet  #=> "Hello Sierra"
 ```
-
-
-#### Indent the `public` and `private` keywords
-
-```ruby
-# bad
-class SomeClass
-  def public_method
-    # ...
-  end
-
-private
-
-  def private_method
-    # ...
-  end
-end
-
-# good
-class SomeClass
-  def public_method
-    # ...
-  end
-
-  private
-
-  def private_method
-    # ...
-  end
-end
-```
-
-
-#### Use bang methods to indicate mutation
-
-```ruby
-# bad
-class Person
-  def initialize(name, age)
-    @name = name
-    @age = age
-  end
-
-  def update(name, age)
-    @name = name
-    @age = age
-    true
-  end
-end
-
-person = Person.new("Sierra", 26)
-person.update("Sierra", 27)  #=> true
-
-# good
-class Person
-  def initialize(name, age)
-    @name = name
-    @age = age
-  end
-
-  def update!(name, age)
-    @name = name
-    @age = age
-    true
-  end
-
-  def update(name, age)
-    Person.new(name, age)
-  end
-end
-
-person = Person.new("Sierra", 26)
-sierra = person.update("Sierra", 27)   #=> Person.new("Sierra", 27)
-person.update!("Sierra", 27)  #=> true
-```
-
-**TIP:** Avoid bang methods altogether. Prefer immutable objects
