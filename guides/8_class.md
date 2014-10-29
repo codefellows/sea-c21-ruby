@@ -1,7 +1,7 @@
 ## Class Guidelines
 
 
-#### Use CamelCase class names
+#### Use PascalCase class names
 
 ```ruby
 # bad
