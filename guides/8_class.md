@@ -202,7 +202,7 @@ person = Person.new('Sierra')
 person.greet  #=> "Hello Sierra"
 ```
 
-**TIP:** "NameError: undefined local variable or method" means just that.
+**TIP:** `NameError: undefined local variable or method` means just that.
 
 
 #### Avoid using `self` when calling internal methods
