@@ -35,6 +35,7 @@
 # If you feel compelled to reassign `@fruit` outside the initialize method, you
 # should stop and rethink your approach.
 
+# rubocop:disable TrivialAccessors
 class OrangeTree
   # replace me
 end

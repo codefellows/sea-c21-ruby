@@ -15,6 +15,7 @@
 #     orange_tree = OrangeTree.new
 #     orange_tree.fruit  #=> 50
 
+# rubocop:disable TrivialAccessors
 class OrangeTree
   # fix me
 end

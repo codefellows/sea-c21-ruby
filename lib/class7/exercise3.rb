@@ -22,6 +22,7 @@
 #     orange_tree.pick!(50)  #=> nil
 #     orange_tree.fruit      #=> 44
 
+# rubocop:disable TrivialAccessors
 class OrangeTree
   # replace me
 end
