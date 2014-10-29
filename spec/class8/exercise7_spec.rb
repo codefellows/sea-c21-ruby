@@ -7,7 +7,7 @@ OMG
 Life is too short
 ROTFL
 Life is too short
-FT
+FTW
 END
 
     expect do
