@@ -6,16 +6,22 @@
 #
 #   Array#each_without_yolo(&block)
 #
-#     Iterates through an array, replacing all occurances of 'YOLO' and 'yolo'
-#     with 'Life is too short'.
+#     Iterates through an Array object, calling the `block` with each element.
+#     However, of the element is some form of 'YOLO', it calls the block with
+#     'Life is too short'.
 #
-#     ['OMG', 'YOLO'].each_without_yolo { |e| puts e }
+#     %w(OMG YOLO ROTFL yolo FTW).each_without_yolo { |e| puts e }
 #
 #     Output:
 #
 #     OMG
 #     Life is too short
+#     ROTFL
+#     Life is too short
+#     FTW
 
-# replace me
-
-%w(OMG YOLO ROTFL yolo FTW).each_without_yolo { |e| puts e }
+class Array
+  def each_without_yolo(&block)
+    block # fix me
+  end
+end

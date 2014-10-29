@@ -2,25 +2,32 @@
 #
 # 5 points
 #
-# Modify the previous method with the following change:
+# Extend your previous program to act like a smart grandfather clock. Given both
+# the hour of the day and a sound, your program will display the sound that many
+# times.
 #
-#   grandfather_clock(str, &block)
+# For example:
 #
-#     Accepts a String and a block. Calls the block, passing in the string,
-#     once for each hour that's passed today.
-#
-#     grandfather_clock('GONGGGGGGG!') do |sound|
-#       puts sound
-#     end
-#
-#     Output:
-#
-#     The hour is 2
-#     GONGGGGGGG!
-#     GONGGGGGGG!
+#   $ ruby exercise6.rb 4 GONGGG!
+#   GONGGG!
+#   GONGGG!
+#   GONGGG!
+#   GONGGG!
 
-# replace me
+def grandfather_clock(hour, sound, &block)
+  hour && sound && block # fix me
+end
 
-grandfather_clock('GONGGGGGGG!') do |sound|
+input1 = ARGV[0]
+input2 = ARGV[1]
+
+usage = 'Usage: exercise6.rb 1-12 SOUND'
+
+abort usage unless input1
+abort usage unless input1.match(/^\d+$/)
+abort usage unless input1.to_i.between?(1, 12)
+abort usage unless input2
+
+grandfather_clock(input1.to_i, input2) do |sound|
   puts sound
 end

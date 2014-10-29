@@ -2,22 +2,22 @@
 #
 # 5 points
 #
-# Write a program that follows the execution of a block and a method. It should
-# display a short message informing the user when execution has reached the
-# construct.
+# Write a program that follows the execution of a block and a method. It will
+# display a short message informing the user when execution has reached both the
+# method and the block.
 #
 # For example:
 #
-#   $ ruby 1_follow_the_execution_part_1.rb
+#   $ ruby exercise1.rb
 #   Executing the method
 #   Executing the block
 #
-# Hint: Don't over think this one. The simpler the better.
+# TIP: Don't over think this one. The simpler the better.
 
-def follow_the_execution(&_block)
-  # replace me
+def follow_the_execution(&block)
+  block # fix me
 end
 
 follow_the_execution do
-  # replace me
+  # fix me
 end

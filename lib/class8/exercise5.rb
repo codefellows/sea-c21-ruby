@@ -2,28 +2,29 @@
 #
 # 5 points
 #
-# Write the following method:
+# Write a program that acts like a grandfather clock. Given the hour of the day,
+# your program will 'DONG!' that many times.
 #
-#   grandfather_clock(&block)
+# For example:
 #
-#     Accepts a block and calls it once for each hour that's passed today.
-#
-#     grandfather_clock do
-#       puts 'DONG!''
-#     end
-#
-#     Output:
-#
-#     The hour is 2
-#     DONG!
-#     DONG!
-#
-# Hint: Use Time.new.hour to get the current hour. However, this returns an
-# Integer between 0 and 23. You'll have to alter the return value to ensure
-# the program uses a number that appears on a clock-face. (i.e. 1 to 12)
+#   $ ruby exercise5.rb 4
+#   DONG!
+#   DONG!
+#   DONG!
+#   DONG!
 
-# replace me
+def grandfather_clock(hour, &block)
+  hour && block # fix me
+end
 
-grandfather_clock do
+input = ARGV[0]
+
+usage = 'Usage: exercise6.rb 1-12 SOUND'
+
+abort usage unless input
+abort usage unless input.match(/^\d+$/)
+abort usage unless input.to_i.between?(1, 12)
+
+grandfather_clock(input.to_i) do
   puts 'DONG!'
 end
