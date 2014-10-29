@@ -240,3 +240,5 @@ end
 person = Person.new('Sierra')
 person.greet  #=> "Hello Sierra"
 ```
+
+**TIP:** You must use `self` when calling an internal setter method
