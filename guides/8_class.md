@@ -75,6 +75,9 @@ class Person
   end
 end
 
+person = Person.new('Sierra')
+person.name  #=> "Sierra"
+
 # good
 class Person
   def initialize(name)
@@ -83,6 +86,9 @@ class Person
 
   attr_reader :name
 end
+
+person = Person.new('Sierra')
+person.name  #=> "Sierra"
 ```
 
 **TIP:** Omit parentheses for methods that have "keyword" status
@@ -102,6 +108,9 @@ class Person
   end
 end
 
+person = Person.new('Sierra')
+person.name = 'Nicole'  #=> "Nicole"
+
 # good
 class Person
   def initialize(name)
@@ -110,6 +119,9 @@ class Person
 
   attr_writer :name
 end
+
+person = Person.new('Sierra')
+person.name = 'Nicole'  #=> "Nicole"
 ```
 
 **TIP:** Omit parentheses for methods that have "keyword" status
@@ -124,14 +136,18 @@ class Person
     @name = name
   end
 
-  def name
-    @name
-  end
-
   def name=(name)
     @name = name
   end
+
+  def name
+    @name
+  end
 end
+
+person = Person.new('Sierra')
+person.name = 'Nicole'  #=> "Nicole"
+person.name             #=> "Nicole"
 
 # good
 class Person
@@ -141,6 +157,10 @@ class Person
 
   attr_accessor :name
 end
+
+person = Person.new('Sierra')
+person.name = 'Nicole'  #=> "Nicole"
+person.name             #=> "Nicole"
 ```
 
 **TIP:** Omit parentheses for methods that have "keyword" status
