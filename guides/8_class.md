@@ -178,7 +178,7 @@ class Person
   attr_reader :name
 
   def greet
-    puts "Hello #{@name}"
+    "Hello #{@name}"
   end
 end
 
@@ -194,7 +194,7 @@ class Person
   attr_reader :name
 
   def greet
-    puts "Hello #{name}"
+    "Hello #{name}"
   end
 end
 
@@ -217,7 +217,7 @@ class Person
   attr_reader :name
 
   def greet
-    puts "Hello #{self.name}"
+    "Hello #{self.name}"
   end
 end
 
@@ -233,7 +233,7 @@ class Person
   attr_reader :name
 
   def greet
-    puts "Hello #{name}"
+    "Hello #{name}"
   end
 end
 
